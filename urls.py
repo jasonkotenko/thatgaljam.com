@@ -1,12 +1,14 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from thatgaljam import settings
-
+from thatgaljam.feeds import PostFeed
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^$', 'thatgaljam.posts.views.latest'),
+    url(r'^$', 'thatgaljam.posts.views.latest', name="home"),
+    url(r'^posts/feed/$', PostFeed(), name="posts_feed"),
+    url(r'^posts/(?P<req_name>.*)/$', 'thatgaljam.posts.views.post', name="single_post"),
 )
 
 if settings.DEBUG == True:
