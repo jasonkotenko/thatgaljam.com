@@ -6,9 +6,10 @@ from thatgaljam.feeds import PostFeed
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'thatgaljam.posts.views.latest', name="home"),
+    url(r'^$', 'thatgaljam.posts.views.category', {'req_name':'blog'}, name="home"),
     url(r'^posts/feed/$', PostFeed(), name="posts_feed"),
     url(r'^posts/(?P<req_name>.*)/$', 'thatgaljam.posts.views.post', name="single_post"),
+    url(r'^category/(?P<req_name>.*)/$', 'thatgaljam.posts.views.category', name="category_view"),
     url(r'^articles/(?P<req_name>.*)/$', 'thatgaljam.articles.views.article', name="single_article"),
 )
 
