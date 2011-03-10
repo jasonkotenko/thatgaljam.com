@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', 'thatgaljam.posts.views.latest', name="home"),
     url(r'^posts/feed/$', PostFeed(), name="posts_feed"),
     url(r'^posts/(?P<req_name>.*)/$', 'thatgaljam.posts.views.post', name="single_post"),
+    url(r'^articles/(?P<req_name>.*)/$', 'thatgaljam.articles.views.article', name="single_article"),
 )
 
 if settings.DEBUG == True:

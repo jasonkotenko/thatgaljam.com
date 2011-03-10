@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Post
+from models import Post, Category
 
 class PostAdmin(admin.ModelAdmin):
     class Media:
@@ -7,3 +7,4 @@ class PostAdmin(admin.ModelAdmin):
                 '/media/js/tiny_mce/textareas.js',)
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Category)
