@@ -21,33 +21,34 @@
 	  
 	    <div class="grid_16" id="top_spacer"></div>
 	    
-	    <div class="grid_5" id="header_left">
+	    <div class="grid_5" id="left_container">
             <img src="{% random_image "images/headers/" %}" />
+                        
+		    <a href="/"><img src="/media/images/thatgaljam.png"></a><br />
+		    <ul id="menu">
+		        <li><a href="/">home</a></li>
+                <li><a href="#">cv</a></li>
+		        <li><a href="#">published words</a></li>
+		        <li><a href="#">art attack</a></li>
+		        <li><a href="#">moving images</a></li>
+		        <li><a href="#">thing o' the moment</a></li>
+		        <li><a href="#">linkage</a></li>
+		        <li><a href="#">contact</a></li>
+		    </ul>
+		 		    
         </div>
 	    
-	    <div class="grid_11" id="header_right">
-		<h1><a href="/">Jason Kotenko</a></h1>
-		</div>
-		<div class="clear"> </div>
+	    <div class="grid_11" id="container_right">
+				
+		    <div class="grid_1">&nbsp</div>
 		
-		<div class="grid_4" id="left_sidebar">
-		    <a href="/"><img src="/media/images/mountain_bw_240w.png"></a><br />
-		    <ul id="menu">
-		        <li><a href="/articles/about-me">About</a></li>
-            <li><a href="/photos">Photos</a></li>
-		        <li><a href="/articles/elsewhere">Elsewhere</a></li>
-		        <li><a href="/library/startup">Startup
-		        Library</a></li>
-		    </ul>
-		</div>
+		    <div class="grid_11">
+		        {% block content %}{% endblock %}
+		    </div>
 		
-		<div class="grid_1">&nbsp</div>
-		
-		<div class="grid_11">	<hr />	
-		    {% block content %}{% endblock %}
-		</div>
-		
-		</div>
+		    </div>
+        </div>
+        
 	<script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

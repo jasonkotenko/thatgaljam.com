@@ -50,7 +50,7 @@ def thumbnail(file, size='100x60'):
 def is_image_file(filename):
     """Does `filename` appear to be an image file?"""
     img_types = [".jpg", ".jpeg", ".png", ".gif"]
-    ext = os.path.splitext(filename)[1]
+    ext = os.path.splitext(filename)[1].lower()
     return ext in img_types
 
 @register.simple_tag
