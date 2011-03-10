@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" media="all" href="/media/css/gallery.css" />
+{% endblock header %}
+
+{% load util_tags %}
+
+{% block title %}Photo Galleries{% endblock title %}
+
+{% block content %}
+<div id="galleries">
+<ul id="gallery_list">
+{% for gallery in galleries %}
+  <li>
+    <a href="/gallery/{{ gallery.name }}">
+        <div id="gallery_title">{{ gallery.name|lower }}</div>
+        {{ gallery.description }}<br />
+        <img src="{{ gallery.photo_set.all.0.image|thumbnail }}" title="{{ gallery.photo_set.all.0.title }}" alt="{{ gallery.photo_set.all.0.description }}" />
+    </a>
+  </li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}

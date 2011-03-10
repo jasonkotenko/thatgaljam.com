@@ -1,0 +1,33 @@
+#gallery_title {
+    font-family: Arial Black;
+    margin-bottom: 20px;
+    color: #00a651;
+}
+
+#ad-descr {
+   padding: 0 25px;
+   margin-bottom: 10px;
+}
+
+.ad-image-description {
+    padding-right: 25px;
+}
+
+.ad-image-description span {
+    margin-left: 20px;
+}
+
+#gallery_title {
+    font-family: Arial Black;
+    margin-bottom: 5px;
+    color: #00a651;
+    font-size: 18px;
+}
+
+#gallery_list a {
+    text-decoration: none;
+}
+
+#gallery_list {
+    list-style-type: none;
+}

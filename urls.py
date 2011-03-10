@@ -11,6 +11,8 @@ urlpatterns = patterns('',
     url(r'^posts/(?P<req_name>.*)/$', 'thatgaljam.posts.views.post', name="single_post"),
     url(r'^category/(?P<req_name>.*)/$', 'thatgaljam.posts.views.category', name="category_view"),
     url(r'^articles/(?P<req_name>.*)/$', 'thatgaljam.articles.views.article', name="single_article"),
+    url(r'^gallery/(?P<req_name>.*)/$', 'thatgaljam.photos.views.gallery', name="single_photo_gallery"),
+    url(r'^photos/(?P<req_name>.*)/$', 'thatgaljam.photos.views.gallery_list', name="photo_gallery_list"),
 )
 
 if settings.DEBUG == True:
