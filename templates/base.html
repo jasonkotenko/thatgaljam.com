@@ -1,0 +1,61 @@
+{% load util_tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transistional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html" charset=utf-8"/>
+		<title>Jason Kotenko</title>
+		
+		<link rel="stylesheet" type="text/css" media="all" href="/media/css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/media/css/text.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/media/css/960.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/media/css/base.css" />
+        {% block header %}{% endblock %}
+
+	</head>
+	
+	<body>
+	    <div class="container_16">
+	  
+	    <div class="grid_16" id="top_spacer"></div>
+	    
+	    <div class="grid_5" id="header_left">
+            <img src="{% random_image "images/headers/" %}" />
+        </div>
+	    
+	    <div class="grid_11" id="header_right">
+		<h1><a href="/">Jason Kotenko</a></h1>
+		</div>
+		<div class="clear"> </div>
+		
+		<div class="grid_4" id="left_sidebar">
+		    <a href="/"><img src="/media/images/mountain_bw_240w.png"></a><br />
+		    <ul id="menu">
+		        <li><a href="/articles/about-me">About</a></li>
+            <li><a href="/photos">Photos</a></li>
+		        <li><a href="/articles/elsewhere">Elsewhere</a></li>
+		        <li><a href="/library/startup">Startup
+		        Library</a></li>
+		    </ul>
+		</div>
+		
+		<div class="grid_1">&nbsp</div>
+		
+		<div class="grid_11">	<hr />	
+		    {% block content %}{% endblock %}
+		</div>
+		
+		</div>
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4726746-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+	</body>
+</html>
