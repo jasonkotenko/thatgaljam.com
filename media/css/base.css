@@ -13,16 +13,18 @@ div#top_spacer {
 
 ul#menu {
     list-style-type: none;
+    margin-top: 20px;
 }
 
 ul#menu li {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
     margin-left: 0px;
 }
 
 ul#menu li a {
     text-decoration: none;
+    font-family: Arial Black;
 }
 
 
