@@ -16,7 +16,7 @@
     <a href="/gallery/{{ gallery.name }}">
         <div id="gallery_title">{{ gallery.name|lower }}</div>
         {{ gallery.description }}<br />
-        <img src="{{ gallery.photo_set.all.0.image|thumbnail }}" title="{{ gallery.photo_set.all.0.title }}" alt="{{ gallery.photo_set.all.0.description }}" />
+        <img src="{{ gallery.photo_set.all.0.image|thumbnail:"200x200" }}" title="{{ gallery.photo_set.all.0.title }}" alt="{{ gallery.photo_set.all.0.description }}" />
     </a>
   </li>
 {% endfor %}
