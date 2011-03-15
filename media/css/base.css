@@ -6,6 +6,10 @@ a {
     color: #00A651;
 }
 
+a:hover {
+    color: #ed145b;
+}
+
 div#top_spacer {
     height: 20px;
 }
