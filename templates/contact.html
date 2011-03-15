@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" media="all" href="/media/css/contact.css" />
+{% endblock %}
+
+{% block content %}
+<h3>Contact Jam!</h3>
+<p>Let me know what you think of my website, what you think of my designs, if you want to get in touch, or if you just have a story to tell!</p>
+<form action="/contact/" method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+{% endblock %}
