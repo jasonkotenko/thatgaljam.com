@@ -12,6 +12,23 @@
     margin-bottom: 15px;
 }
 
+#post_tags ul {
+    list-style-type: none;
+}
+
+#post_tags li { 
+    float: left;
+    padding: 4px 12px;
+    border: 1px solid #BBB;
+    background: #CCC;
+    margin: 0px 5px 0 0;
+    font-weight: bold;
+}
+
+#post_tags a {
+    text-decoration: none;
+}
+
 div.post {
     margin-bottom: 40px;
 }
