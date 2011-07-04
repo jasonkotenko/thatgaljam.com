@@ -5,4 +5,15 @@
     {{ object.body|safe }}
 
     <a href="/posts/{{ object.slug }}">Post a Comment!</a>
+<div id="post_tags">
+{% if object.get_tags %}
+Tags:
+<ul>
+{% for tag in object.get_tags %}
+  <a href="/posts/tag/{{ tag.name }}"><li>{{ tag.name}}</li></a>
+{% endfor %}
+</ul>
+{% endif %}
+</div><br />
 </div>
+

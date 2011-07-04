@@ -9,6 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'thatgaljam.posts.views.category', {'req_name':'blog'}, name="home"),
     url(r'^posts/feed/$', PostFeed(), name="posts_feed"),
+    url(r'^posts/tag/(?P<tag_name>.*)/$', 'thatgaljam.posts.views.tagged_posts', name="tagged_posts"),
     url(r'^posts/(?P<req_name>.*)/$', 'thatgaljam.posts.views.post', name="single_post"),
     url(r'^category/(?P<req_name>.*)/$', 'thatgaljam.posts.views.category', name="category_view"),
     url(r'^articles/(?P<req_name>.*)/$', 'thatgaljam.articles.views.article', name="single_article"),
