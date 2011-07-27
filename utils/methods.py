@@ -10,4 +10,4 @@ def paginate(request, obj_list, num_per_page=10):
 		objects = paginator.page(page)
 	except (EmptyPage, InvalidPage):
 		objects = paginator.page(paginator.num_pages)
-	return objects
+	return objects.object_list
