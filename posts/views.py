@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from models import Post, Category
 from django.shortcuts import get_list_or_404, render_to_response, get_object_or_404
+from thatgaljam.utils.methods import paginate
 
 #def latest(request):
 #	a = sorted(get_list_or_404(Post), key=Post.date, reverse=True)
@@ -12,7 +13,7 @@ def post(request, req_name):
                                     
 def category(request, req_name):
     cat = get_object_or_404(Category, slug=req_name)
-    p = sorted(get_list_or_404(Post, category=cat), key=Post.date, reverse=True)
+    p = paginate(request, sorted(get_list_or_404(Post, category=cat), key=Post.date, reverse=True))
     return render_to_response('posts/post_list.html', {'post_list': p})
 
 from tagging.models import Tag, TaggedItem
